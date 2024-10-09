@@ -31,5 +31,6 @@ public class DataGatherer {
         generator.addProvider(event.includeServer(), new LootTableProvider(output, Collections.emptySet(), List.of(
                 new LootTableProvider.SubProviderEntry(BlockLootTableProvider::new, LootContextParamSets.BLOCK)
         ), lookupProvider));
+        generator.addProvider(event.includeClient(), new EnUsProvider(output));
     }
 }

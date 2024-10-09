@@ -117,6 +117,7 @@ configurations {
 dependencies {
     implementation "curse.maven:farmers-delight-398521:5772720"
     runtimeOnly "curse.maven:jei-238222:5793291"
+    runtimeOnly "curse.maven:appleskin-248787:5586600"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

@@ -6,7 +6,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -16,8 +15,8 @@ public class FDCreativeTabs {
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> FD_TAB = CREATIVE_MODE_TABS.register("frenchdelights_tab", () -> CreativeModeTab.builder()
             .title(Component.literal("French Delights"))
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(Items.BREAD::getDefaultInstance)
+            .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
+            .icon(FDItems.BAGUETTE::toStack)
             .displayItems((parameters, output) -> {
                 for (DeferredHolder<Item, ? extends Item> item : FDItems.ITEMS.getEntries()) {
                     output.accept(item.get());
@@ -26,6 +25,4 @@ public class FDCreativeTabs {
                         output.accept(item.get());
                 }
             }).build());
-
-
 }

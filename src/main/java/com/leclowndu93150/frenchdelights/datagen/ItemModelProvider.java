@@ -21,7 +21,13 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
 
     @Override
     protected void registerModels() {
-
+        basicItem(FDItems.BAGUETTE.get());
+        basicItem(FDItems.CROISSANT.get());
+        //basicItem(FDItems.PAIN_CHOCOLAT.get());
+        basicItem(FDItems.SALT.get());
+        basicItem(FDItems.WINE_BOTTLE.get());
+        //basicItem(FDItems.WINE_GLASS.get());
+        //basicItem(FDItems.SALTED_DOUGH.get());
         blockItems();
     }
 
